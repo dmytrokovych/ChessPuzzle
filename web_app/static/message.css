@@ -1,0 +1,11 @@
+.message {
+    background-color:aliceblue;padding:25px;
+    font-size: 26px;
+    text-align: justify;
+}
+.container{
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}

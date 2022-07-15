@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ChessCom Personalised Puzzles</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="./static/style.css" rel="stylesheet" type="text/css" />
+    <link href="./static/home.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="welcome_info">
+        <h1>Welcome to ChessHelper</h1>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod
+        fermentum porta. Mauris non nibh sollicitudin, venenatis arcu nec,
+        dapibus sapien. Vivamus iaculis diam et aliquam blandit. Donec interdum
+        odio enim, sed maximus tortor vulputate eget. Sed sagittis dapibus
+        turpis, vitae sagittis est congue ut. Duis eget ex semper sem egestas
+        ornare. Phasellus aliquam odio lacinia massa mattis, sed vulputate justo
+        accumsan. Phasellus eu ligula quis nunc pellentesque posuere vel eget
+        augue. Nunc quis massa at nibh ultricies varius non non urna. Nulla diam
+        ante, ultricies nec tortor ut, congue fermentum neque. Phasellus id
+        faucibus massa. Suspendisse pretium aliquam neque at suscipit. Sed nisi
+        mauris, luctus id lacinia accumsan, volutpat a nunc. Quisque nunc nisl,
+        hendrerit et odio sit amet, imperdiet mattis eros. Nulla dictum eros nec
+        ante vestibulum, ut auctor magna sagittis. Nam semper sit amet diam id
+        pretium. Donec lobortis turpis id rhoncus euismod. Aliquam sit amet
+        nulla ipsum. Maecenas sit amet dui lorem. Aliquam at vestibulum nisi,
+        vitae hendrerit lacus. Morbi porttitor nunc id tincidunt mattis.
+      </div>
+      <div class="user_form">
+        <form method="post">
+          <input type="text" name="username" placeholder="chess.com username" />
+          <input type="submit" value="FIND ME" href/>
+        </form>
+        <!-- To use the icon you have to mention this link: -->
+        <!-- <a href="https://www.flaticon.com/free-icons/chess" title="chess icons">Chess icons created by Talha Dogar - Flaticon</a> -->
+        <div class="icon"><img src="../static/img/chess_icon.png" width="150" height="150"/></div>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+  </body>
+</html>

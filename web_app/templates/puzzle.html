@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ChessCom Personalised Puzzles</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="../static/style.css" rel="stylesheet" type="text/css" />
+    <link href="../static/home.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+    <script type="text/javascript">
+      const answer = {{ data.answer|tojson }};
+      const legal_moves = {{ data.legal_moves|tojson }};
+      const pieces = {{ data.pieces|tojson }};
+      const fen = {{ data.fen|tojson }};
+    </script>
+    <script src="../static/dragging.js" type="text/javascript"></script>
+    <script src="../static/setPieces.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="board"></div>
+      <div class="analysis">
+          <h2>Puzzle from:</h2>
+          <h3> {{ data.gamename }} </h3>
+          <h1>Play as <b style="color: #fad155;">{{ data.color }}</b> </h1>
+          <div class="message"></div>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+  </body>
+</html>

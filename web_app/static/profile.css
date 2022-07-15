@@ -1,0 +1,128 @@
+.profile_info{
+    background-color: #312e2b;
+    background-size: 100%;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    float: left;
+    color: white;
+    padding: 20px;
+    text-align: justify;
+}
+.profile_info h1{
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.profile_info h3{
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #fad155;
+}
+.profile_info h4{
+    color: #ebe8cd;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.profile_info ul{
+    text-align: justify;
+}
+.profile_info table, td, th {
+    border: 1px solid #7d7c7b;
+}
+.profile_info table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.profile_info th{
+    padding: 15px;
+    text-align: center;
+    color: #fad155
+}
+.profile_info td{
+    padding: 5px;
+    text-align: center;
+}
+.profile_info tr:hover{
+    background-color: #39719c;
+}
+.profile_info tr:hover th{
+    background-color: #0097c7;
+    color: white;
+}
+.user_form  h1{
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+input[type="submit"]{
+    width: 300px;
+    margin-top: 100x;
+    background-color: #e43131;
+    font-size: 20px;
+    color: white;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+input[type="submit"]:hover{
+    background-color: #f54242;
+}
+input[type="text"]{
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    background-color: #ebe8cd;
+    font-size: 15px;
+    font-weight: bold;
+    color: #272522;
+    padding: 2px;
+    border: 2px solid #272522;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+#games_number_container{
+    width: 300px;
+    height: 30px;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 290px;
+    height: 15px;
+    border-radius: 5px;
+    background: white;
+    outline: none;
+  }
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #7ea650;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #7ea650;
+    cursor: pointer;
+}
+.games_number{
+    width: 25px;
+    height: 20px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: auto;
+}

@@ -1,0 +1,83 @@
+body{
+    background-image: url("img/tactile_noise.png");
+    font-family: 'Lato', sans-serif;
+}
+.container{
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.board{
+    background-image: url("img/style1/board.png");
+    background-size: 100%;
+    width: 540px;
+    height: 540px;
+    position: relative;
+
+    float: left;
+}
+.analysis{
+    background-color: #312e2b;
+    color: #b4b3b2;
+    font-size: 15px;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    float: left;
+}
+.analysis > h2{
+    color: white;
+    font-size: 20px;
+    margin-top: 0%;
+}
+.analysis > h2:hover{
+    cursor: pointer;
+}
+.piece{
+    width: 12.5%;
+    height: 12.5%;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+}
+.piece.bk{
+    background-image: url("img/style1/bk.png");
+}
+.piece.bq{
+    background-image: url("img/style1/bq.png");
+}
+.piece.bp{
+    background-image: url("img/style1/bp.png");
+}
+.piece.br{
+    background-image: url("img/style1/br.png");
+}
+.piece.bb{
+    background-image: url("img/style1/bb.png");
+}
+.piece.bn{
+    background-image: url("img/style1/bn.png");
+}
+.piece.wk{
+    background-image: url("img/style1/wk.png");
+}
+.piece.wq{
+    background-image: url("img/style1/wq.png");
+}
+.piece.wp{
+    background-image: url("img/style1/wp.png");
+}
+.piece.wr{
+    background-image: url("img/style1/wr.png");
+}
+.piece.wb{
+    background-image: url("img/style1/wb.png");
+}
+.piece.wn{
+    background-image: url("img/style1/wn.png");
+}
+.piece.dragging{
+    cursor: grabbing;
+    z-index: 2;
+}
