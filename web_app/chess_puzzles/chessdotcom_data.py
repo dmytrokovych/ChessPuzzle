@@ -1,4 +1,3 @@
-import chess.pgn
 from chessdotcom import get_player_game_archives
 import requests
 from datetime import datetime

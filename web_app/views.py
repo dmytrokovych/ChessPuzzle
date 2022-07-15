@@ -1,6 +1,6 @@
-from flask import Blueprint, flash, g, redirect, render_template, request, url_for, jsonify
+from flask import Blueprint, redirect, render_template, request, url_for
 from .background_tasks import update_db
-from .db import select_puzzles_from_db, update_puzzle_status_in_db, get_random_puzzle
+from .db import update_puzzle_status_in_db, get_random_puzzle
 from .chess_puzzles.chessdotcom_data import get_user_data
 
 
