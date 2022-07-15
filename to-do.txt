@@ -1,5 +1,5 @@
 get_player_profile('dmytroko').json
 get_player_stats('dmytroko').json
 
-1. Make invitation page with player avatar and ranks; upload also an avatar
+1. Make invitation page with player avatar and ranks;
 2. Make loading page

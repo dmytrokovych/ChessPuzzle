@@ -168,3 +168,8 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/flask
+
+/stockfish
+/chess-server
+to-do.txt
+web_app/Notes-14-07.ipynb
