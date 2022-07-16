@@ -169,4 +169,7 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/flask
 
-# stockfish/
+stockfish/
+server_helper.txt
+database.db-journal
+database.db
