@@ -4,7 +4,7 @@
 
 ```python
 # windows
-transport, engine = await chess.engine.popen_uci(r"stockfish\stockfish_win\stockfish_14.1_win_x64_avx2.exe")
+transport, engine = await chess.engine.popen_uci(r"stockfish\stockfish_win\stockfish_14_x64.exe")
 ```
 ```python
 # linux
