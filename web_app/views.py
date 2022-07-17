@@ -21,7 +21,7 @@ def home():
 def profile(username):
     if request.method == 'POST':
         number_of_games = int(request.form['games_number'])
-        update_db.delay(username, number_of_games)
+        update_db.delay(username, number_of_games=number_of_games)
         return redirect(url_for('views.puzzle', username=username))
     
     games = get_user_data(username, number_of_games=10)

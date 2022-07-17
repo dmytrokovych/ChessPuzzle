@@ -11,10 +11,6 @@ celery.conf.result_backend = os.environ.get("CELERY_RESULT_BACKEND", 'redis://12
 
 @celery.task()
 def update_db(username, number_of_games=1):
-    db = get_db()
-
-    create_games_table(db, username)
-    create_puzzles_table(db, username)
-    insert_games(db, username, number_of_games)
-
-    db.close()
+    create_games_table(username)
+    create_puzzles_table(username)
+    insert_games(username, number_of_games=number_of_games)

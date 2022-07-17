@@ -22,6 +22,9 @@ def get_games(username, number_of_games=10):
     games = []
     urls = get_games_urls(username)
 
+    if not urls:
+        return []
+
     try:
         for url in urls[::-1]:
             if len(games) < number_of_games:
@@ -32,6 +35,7 @@ def get_games(username, number_of_games=10):
         print(f'{number_of_games} games have been successfully loaded.')
     except:
         print(f'Failed to load {username} games.')
+        return []
 
     return games[:number_of_games]
 

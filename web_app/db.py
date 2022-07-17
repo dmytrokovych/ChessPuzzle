@@ -13,8 +13,25 @@ def get_db():
     return db
 
 
-def create_games_table(db, username):
-    tablename = username + "_games"
+def commit_and_close(db):
+    db.commit()
+    db.close()
+
+def db_handler(func):
+    """decorator for database connect, commit and close"""
+    def wrapper(*args, **kwargs):
+        db = get_db()
+        output = func(*args, **kwargs, db=db)
+        db.commit()
+        db.close()
+        return output
+
+    return wrapper
+
+
+@db_handler
+def create_games_table(username, db):
+    tablename = "games_" + username 
     db.execute(f"""CREATE TABLE IF NOT EXISTS {tablename}(
         white TEXT NOT NULL,
         black TEXT NOT NULL,
@@ -22,11 +39,11 @@ def create_games_table(db, username):
         date TEXT PRIMARY KEY NOT NULL,
         pgn TEXT NOT NULL);"""
     )
-    db.commit()
 
 
-def create_puzzles_table(db, username):
-    tablename = username + "_puzzles"
+@db_handler
+def create_puzzles_table(username, db):
+    tablename = "puzzles_" + username
     db.execute(f"""CREATE TABLE IF NOT EXISTS {tablename}(
         fen TEXT PRIMARY KEY NOT NULL,
         answer TEXT NOT NULL,
@@ -35,11 +52,10 @@ def create_puzzles_table(db, username):
         color TEXT NOT NULL,
         status TEXT NOT NULL);"""
     )
-    db.commit()
 
 
-def insert_puzzles(db, username, game):
-    tablename = username + "_puzzles"
+def insert_puzzles(username, game, db):
+    tablename = "puzzles_" + username
 
     color = ['black', 'white'][capital(username) in game["white"]]
     puzzles = make_puzzles(game["pgn"], color, depth=12, inaccuracy_level=1.0)
@@ -55,52 +71,52 @@ def insert_puzzles(db, username, game):
         )
 
 
-def insert_games(db, username, number_of_games=1):
-    tablename = username + "_games"
+@db_handler
+def insert_games(username, db, number_of_games=1):
+    tablename = "games_" + username
     games = get_user_data(username, number_of_games=number_of_games)
 
-    for game in games:
-        res = db.execute(f"""INSERT OR IGNORE INTO {tablename} VALUES 
-            ("{game["white"]}", 
-            "{game["black"]}", 
-            "{game['result']}", 
-            "{game["date"]}", 
-            '{game["pgn"]}');"""
-        )
-        if bool(res.lastrowid):
-            insert_puzzles(db, username, game)
-            db.commit()
-            print('Game is saved to database')
-        else:
-            print('Game already in database')
-
-
-def select_puzzles_from_db(username):
-    db = get_db()
-
-    tablename = username + "_puzzles"
-    puzzle_data = db.execute(f"""
-        SELECT fen, answer, legal_moves, gamename, color 
-        FROM {tablename} 
-        WHERE status="unsolved";"""
-    ).fetchall()
-    db.close()
+    if games:
+        for game in games:
+            res = db.execute(f"""INSERT OR IGNORE INTO {tablename} VALUES 
+                ("{game["white"]}", 
+                "{game["black"]}", 
+                "{game['result']}", 
+                "{game["date"]}", 
+                '{game["pgn"]}');"""
+            )
+            # Rewrite the part below into a separate function
+            if bool(res.lastrowid):
+                insert_puzzles(username, game, db=db)
+                print('Game is saved to database')
+            else:
+                print('Game already in database')
     
+
+@db_handler
+def select_puzzles_from_db(username, db):
+    tablename = "puzzles_" + username
+    try:
+        puzzle_data = db.execute(f"""
+            SELECT fen, answer, legal_moves, gamename, color 
+            FROM {tablename} 
+            WHERE status="unsolved";"""
+        ).fetchall()
+    except:
+        puzzle_data = []
+
     return puzzle_data
 
 
-def update_puzzle_status_in_db(fen, username):
-    db = get_db()
-
-    tablename = username + "_puzzles"
+@db_handler
+def update_puzzle_status_in_db(fen, username, db):
+    tablename = "puzzles_" + username
     db.execute(f"""
         UPDATE {tablename} 
         SET status="solved" 
         WHERE fen="{fen}";"""
     )
     print('Puzzle status changed to "solved"')
-    db.commit()
-    db.close()
 
 
 def get_random_puzzle(username):
