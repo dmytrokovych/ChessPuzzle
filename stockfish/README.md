@@ -8,5 +8,5 @@ transport, engine = await chess.engine.popen_uci(r"stockfish\stockfish_win\stock
 ```
 ```python
 # linux
-transport, engine = await chess.engine.popen_uci(r"stockfish/stockfish_linux/stockfish_15_x64")
+transport, engine = await chess.engine.popen_uci(r"stockfish/stockfish_linux/stockfish_14_x64")
 ```
