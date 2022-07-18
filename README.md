@@ -1,4 +1,7 @@
 Description (in progress)
+
+<img src="https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle.gif" alt="ChessPuzzle gif" width="800" height="377">
+
 ![ChessPuzzle gif](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle.gif)
 
 ## General info
