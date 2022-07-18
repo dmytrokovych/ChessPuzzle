@@ -1,4 +1,5 @@
 Description (in progress)
+![ChessPuzzle gif](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle.gif)
 
 ## General info
 ChessPuzzle is a web app that creates personalised chess puzzles based on a user's recent games on [chess.com](https://www.chess.com/). Just enter your chess.com username and receive the puzzles to solve in your browser.
@@ -21,11 +22,11 @@ Project is created with:
 - Redis
 
 ## Usage
-![ChessPuzzle home](../descriptions/blob/main/ChessPuzzle/chess_puzzle_1.png)
+![ChessPuzzle home](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle_1.png)
 
-![ChessPuzzle profile](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle_1.png)
+![ChessPuzzle profile](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle_2.png)
 
-![ChessPuzzle puzzle](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle_1.png)
+![ChessPuzzle puzzle](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle_3.png)
 
 
 ### Contribution
