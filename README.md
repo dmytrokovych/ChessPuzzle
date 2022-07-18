@@ -5,7 +5,7 @@ Description (in progress)
 ## General info
 ChessPuzzle is a web app that creates personalised chess puzzles based on a user's recent games on [chess.com](https://www.chess.com/). Just enter your chess.com username and receive the puzzles to solve in your browser.
 
-Each puzzle is a position from the user's last games in which the user made a mistake. ChessPuzzle gives an opportunity for the user to fix the mistake and make the correct move. Errors in each game are caught by a chess engine running in the background on a server, after which puzzles (positions and best moves) are saved to a database. The chess engine used for game analysis is open-sourced [Stockfish 14].(https://stockfishchess.org/). 
+Each puzzle is a position from the user's last games in which the user made a mistake. ChessPuzzle gives an opportunity for the user to fix the mistake and make the correct move. Errors in each game are caught by a chess engine running in the background on a server, after which puzzles (positions and best moves) are saved to a database. The chess engine used for game analysis is open-sourced [Stockfish 14](https://stockfishchess.org/). 
 
 ### Demo
 Here is a live demo: [http://34.118.102.169/](http://34.118.102.169/)\
