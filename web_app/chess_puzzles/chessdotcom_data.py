@@ -29,7 +29,7 @@ def get_games(username, number_of_games=10):
         for url in urls[::-1]:
             if len(games) < number_of_games:
                 res = requests.get(url).json()
-                chess_games = [game for game in res['games'] if game['rules'] == 'chess']
+                chess_games = [game for game in res['games'][::-1] if game['rules'] == 'chess']
                 games.extend(chess_games)
                 
         print(f'{number_of_games} games have been successfully loaded.')
