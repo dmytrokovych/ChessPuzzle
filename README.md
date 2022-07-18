@@ -23,13 +23,16 @@ Project is created with:
 - Redis
 
 ## Usage
-1. Enter your [chess.com](https://www.chess.com/) username (e.g. [FabianoCaruana](https://www.chess.com/member/fabianocaruana)): \
+1. Enter your [chess.com](https://www.chess.com/) username (e.g. [FabianoCaruana](https://www.chess.com/member/fabianocaruana)): 
+
 ![ChessPuzzle home](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle_1.png)
 
 2. Choose how many of the last games to analyse.
+
 ![ChessPuzzle profile](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle_2.png)
 
-3. Solve the puzzle! \
+3. Solve the puzzle! 
+
 ![ChessPuzzle puzzle](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle_3.png)
 
 
