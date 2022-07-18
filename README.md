@@ -21,7 +21,7 @@ Project is created with:
 - Redis
 
 ## Usage
-![ChessPuzzle home](../descriptions/blob/main/ChessPuzzle/chess_puzzle_1.png?raw=true)
+![ChessPuzzle home](descriptions/blob/main/ChessPuzzle/chess_puzzle_1.png?raw=true)
 
 ![ChessPuzzle profile](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle_1.png)
 
