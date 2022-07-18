@@ -1,6 +1,6 @@
 Description (in progress)
 
-<img src="https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle.gif" alt="ChessPuzzle gif" width="800" height="377">
+<img src="https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle.gif" alt="ChessPuzzle gif" width="600" height="283">
 
 ![ChessPuzzle gif](https://github.com/dmytrokovych/descriptions/blob/main/ChessPuzzle/chess_puzzle.gif)
 
