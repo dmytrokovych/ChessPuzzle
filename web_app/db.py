@@ -13,10 +13,6 @@ def get_db():
     return db
 
 
-def commit_and_close(db):
-    db.commit()
-    db.close()
-
 def db_handler(func):
     """decorator for database connect, commit and close"""
     def wrapper(*args, **kwargs):
